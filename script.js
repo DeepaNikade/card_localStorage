@@ -44,22 +44,18 @@ function userInfoStoring() {
   document.getElementById("city").textContent = userdetails.City;
   document.getElementById("village").textContent = userdetails.village;
 }
-userInfoStoring();
+// userInfoStoring();
 
+let modebtn = document.querySelector("#mode");
+let body = document.querySelector("body");
+let currMode = "light";
 
-
-let modebtn=document.querySelector("#mode");
-let body=document.querySelector("body")
-let currMode="light";
-
-modebtn.addEventListener("click",()=>{
-    if(currMode === "light"){
-        currMode="dark";
-        body.style.backgroundColor="black";
-
-
-    }else{
-        currMode="light";
-        body.style.backgroundColor="white";
-    }
-})
+modebtn.addEventListener("click", () => {
+  if (currMode === "light") {
+    currMode = "dark";
+    body.style.backgroundColor = "black";
+  } else {
+    currMode = "light";
+    body.style.backgroundColor = "white";
+  }
+});
